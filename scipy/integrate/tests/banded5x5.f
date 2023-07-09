@@ -29,7 +29,8 @@ c   numerically "correct", but the errors would be different,
 c   and the counts of function and Jacobian evaluations would
 c   likely be different.
 c
-      block data jacobian
+      ! block data jacobian
+      subroutine jacobian_block_data()
       implicit none
 
       double precision bands

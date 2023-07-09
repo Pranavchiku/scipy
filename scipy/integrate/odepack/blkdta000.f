@@ -1,4 +1,4 @@
-      block data
+      subroutine empty_block_data()
 c-----------------------------------------------------------------------
 c this data subprogram loads variables into the internal common
 c blocks used by the odepack solvers.  the variables are
