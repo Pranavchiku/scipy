@@ -3412,8 +3412,9 @@ C listed (local) variables to be saved between calls to this integrator.
 C-----------------------------------------------------------------------
       SAVE LENRV1, LENIV1, LENRV2, LENIV2
 C
-      COMMON /ZVOD01/ RVOD1(50), IVOD1(33)
-      COMMON /ZVOD02/ RVOD2(1), IVOD2(8)
+      DIMENSION RVOD1(50), IVOD1(33), RVOD2(1), IVOD2(8)
+      ! COMMON /ZVOD01/ RVOD1(50), IVOD1(33)
+      ! COMMON /ZVOD02/ RVOD2(1), IVOD2(8)
       DATA LENRV1/50/, LENIV1/33/, LENRV2/1/, LENIV2/8/
 C
       IF (JOB .EQ. 2) GO TO 100
