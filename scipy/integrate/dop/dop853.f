@@ -859,7 +859,7 @@ C     APPROXIMATION TO THE II-TH COMPONENT OF THE SOLUTION AT X.
 C ----------------------------------------------------------
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       DIMENSION CON(8*ND),ICOMP(ND)
-      COMMON /CONDO8/XOLD,H
+      COMMON /CONDO8/XOLD,HOUT
 C ----- COMPUTE PLACE OF II-TH COMPONENT 
       I=0 
       DO 5 J=1,ND 
@@ -870,7 +870,7 @@ C ----- COMPUTE PLACE OF II-TH COMPONENT
          CONTD8=-1
          RETURN
       END IF  
-      S=(X-XOLD)/H
+      S=(X-XOLD)/HOUT
       S1=1.D0-S
       CONPAR=CON(I+ND*4)+S*(CON(I+ND*5)+S1*(CON(I+ND*6)+S*CON(I+ND*7)))
       CONTD8=CON(I)+S*(CON(I+ND)+S1*(CON(I+ND*2)+S*(CON(I+ND*3)

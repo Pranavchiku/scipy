@@ -626,7 +626,7 @@ C     APPROXIMATION TO THE II-TH COMPONENT OF THE SOLUTION AT X.
 C ----------------------------------------------------------
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       DIMENSION CON(5*ND),ICOMP(ND)
-      COMMON /CONDO5/XOLD,H
+      COMMON /CONDO5/XOLD,HOUT
 C ----- COMPUTE PLACE OF II-TH COMPONENT 
       I=0 
       DO 5 J=1,ND 
@@ -637,7 +637,7 @@ C ----- COMPUTE PLACE OF II-TH COMPONENT
          CONTD5=-1
          RETURN
       END IF  
-      THETA=(X-XOLD)/H
+      THETA=(X-XOLD)/HOUT
       THETA1=1.D0-THETA
       CONTD5=CON(I)+THETA*(CON(ND+I)+THETA1*(CON(2*ND+I)+THETA*
      &           (CON(3*ND+I)+THETA1*CON(4*ND+I))))
